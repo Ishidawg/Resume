@@ -1,0 +1,243 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: grayscale;
+}
+
+:root {
+    font-family: "Hepta Slab", serif;
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #26282a;
+    color: #ffffff;
+
+    position: relative;
+    min-height: 100vh;
+}
+
+/* HEADER */
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: auto;
+
+    max-width: 126rem;
+    padding: 6rem 0rem;
+}
+
+.willian {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    gap: 4.2em;
+}
+
+.willian article {
+    font-size: 4.2em;
+    text-align: center;
+}
+
+.willian-img {
+    width: 160px;
+}
+
+.vertical-line {
+    border-left: 2px solid #ffffff;
+    border-radius: 1em;
+    height: 130px;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 2.6rem;
+}
+
+.nav-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.svg {
+    cursor: pointer;
+    width: 4rem;
+    transition: scale 200ms ease;
+}
+
+.svg:hover {
+    scale: 1.12;
+}
+
+/* CONTAINER */
+
+.container {
+    /* padding: 2rem 32rem; */
+    margin: auto;
+    padding-top: 4rem;
+    padding-bottom: 12rem;
+    max-width: 82rem;
+
+    text-align: justify;
+}
+
+.home-article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5rem;
+
+    line-height: 2.5rem;
+    font-size: 1.8rem;
+}
+
+.home-article h1 {
+    font-size: 2.4rem;
+    font-family: 700;
+
+    margin-bottom: 1rem;
+}
+
+.home-article ul {
+    text-transform: capitalize;
+    margin-left: 3.2rem;
+    line-height: 2.8rem;
+}
+
+/* FOOTER */
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* display: grid;
+    place-content: center; */
+    gap: 2rem;
+
+    margin: auto;
+    text-align: justify;
+    font-size: 1.5rem;
+}
+
+/* DIALOG */
+
+dialog {
+    margin: auto;
+    text-align: center;
+
+    color: #ffffff;
+    background-color: #171717bc;
+
+    border: none;
+    border-radius: 1rem;
+
+    padding: 5rem;
+
+    font-size: 1.4rem;
+
+    animation: show 0.4s ease;
+}
+
+dialog button {
+    padding: 1rem;
+    margin: 0.75rem;
+    border-radius: 0.5rem;
+
+    font-size: 1.2rem;
+
+    background-color: #ffffff;
+
+    border: none;
+    outline: none;
+
+    cursor: pointer;
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+}
+
+.blur {
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+}
+
+/* INFO */
+
+.resume h1 {
+    text-align: center;
+}
+
+.info-job {
+    text-align: center;
+}
+
+.info-job ul {
+    list-style: none;
+    margin-left: 0;
+}
+
+.job-stuff {
+    text-align: center;
+    margin: auto;
+}
+
+.job-svg {
+    filter: grayscale(90%);
+
+    transition: all 200ms ease;
+}
+
+.job-svg:hover {
+    filter: grayscale(0);
+}
+
+.svg-adjust {
+    margin: 1rem;
+}
+
+.code-svg {
+    filter: invert(85%) sepia(89%) saturate(34%) hue-rotate(307deg)
+        brightness(108%) contrast(80%);
+}
+
+.html:hover {
+    filter: invert(62%) sepia(66%) saturate(7500%) hue-rotate(9deg)
+        brightness(96%) contrast(87%);
+}
+
+.css:hover {
+    filter: invert(43%) sepia(61%) saturate(5850%) hue-rotate(191deg)
+        brightness(93%) contrast(91%);
+}
+
+.js:hover {
+    filter: invert(71%) sepia(68%) saturate(445%) hue-rotate(5deg)
+        brightness(110%) contrast(92%);
+}
+
+.python:hover {
+    filter: invert(41%) sepia(64%) saturate(531%) hue-rotate(182deg)
+        brightness(84%) contrast(87%);
+}
