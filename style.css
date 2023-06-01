@@ -280,7 +280,7 @@ dialog button {
         brightness(84%) contrast(87%);
 }
 
-#menu {
+#open-btn-menu {
     opacity: 0;
 }
 
@@ -313,7 +313,7 @@ dialog button {
         display: none;
     }
 
-    #menu {
+    #open-btn-menu {
         opacity: 1;
     }
 }
