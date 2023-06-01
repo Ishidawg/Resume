@@ -281,7 +281,7 @@ dialog button {
 }
 
 #open-btn-menu {
-    opacity: 0;
+    display: none;
 }
 
 /* MEDIA SIZE CONTENT */
@@ -314,6 +314,6 @@ dialog button {
     }
 
     #open-btn-menu {
-        opacity: 1;
+        display: block;
     }
 }
