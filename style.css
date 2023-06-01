@@ -308,4 +308,8 @@ dialog button {
     .nav-items {
         display: none;
     }
+
+    #menu {
+        display: none;
+    }
 }
