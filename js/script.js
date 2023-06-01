@@ -12,6 +12,9 @@ const infoEllipse = document.getElementById("info-ellipse");
 const openMenu = document.getElementById("open-btn-menu");
 const menu = document.getElementById("menu");
 
+const homeDialog = document.getElementById("dialog-home");
+const infoDialog = document.getElementById("dialog-info");
+
 var pageState = "port";
 var pageSection = "home";
 
