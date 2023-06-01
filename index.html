@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Willian Cagol</title>
+    <link rel="icon" type="image/x-icon" href="./svg/user-circle-fill.svg">
+
     <link rel="stylesheet" href="style.css">
 
     <script src="js/script.js" defer></script>
@@ -24,17 +26,31 @@
         </section>
         <nav class="nav">
 
+            <dialog id="menu">
+                <h1>Pages</h1>
+                <img class="svg" id="home" src="./svg/house-light.svg" alt="home">
+                <img class="svg" id="info" src="./svg/info-light.svg" alt="info">
+            </dialog>
+
             <dialog id="lang">
                 <h1>Language</h1>
                 <button id="pt-br">PT-BR</button>
                 <button id="en-us">EN-US</button>
             </dialog>
 
+            <img class="svg" id="open-btn-menu" src="./svg/list-light.svg" alt="menu">
+
             <img class="svg" id="open-btn" src="./svg/globe-light.svg" alt="language">
 
             <section class="nav-items">
-                <img class="svg" id="home" src="./svg/house-light.svg" alt="home">
-                <img class="svg" id="info" src="./svg/info-light.svg" alt="info">
+                <div class="rounded">
+                    <span id="home-ellipse"></span>
+                    <img class="svg" id="home" src="./svg/house-light.svg" alt="home">
+                </div>
+                <div class="rounded">
+                    <span id="info-ellipse"></span>
+                    <img class="svg" id="info" src="./svg/info-light.svg" alt="info">
+                </div>
             </section>
         </nav>
     </header>

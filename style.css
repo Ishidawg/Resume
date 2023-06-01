@@ -79,6 +79,40 @@ body {
     scale: 1.12;
 }
 
+.rounded {
+    position: relative;
+}
+
+.dark-ellipse {
+    position: absolute;
+
+    background-color: #8b8b8b;
+
+    margin: 0;
+    padding: 0.4rem;
+
+    border-radius: 50%;
+
+    top: 50%;
+    left: -1rem;
+    transform: translate(-50%, -50%);
+}
+
+.light-ellipse {
+    position: absolute;
+
+    background-color: #ffffff;
+
+    margin: 0;
+    padding: 0.4rem;
+
+    border-radius: 50%;
+
+    top: 50%;
+    left: -1rem;
+    transform: translate(-50%, -50%);
+}
+
 /* CONTAINER */
 
 .container {
@@ -112,6 +146,10 @@ body {
     text-transform: capitalize;
     margin-left: 3.2rem;
     line-height: 2.8rem;
+}
+
+.resume h1 {
+    text-align: left;
 }
 
 /* FOOTER */
@@ -185,7 +223,7 @@ dialog button {
 
 /* INFO */
 
-.resume h1 {
+.college h1 {
     text-align: center;
 }
 
@@ -240,4 +278,34 @@ dialog button {
 .python:hover {
     filter: invert(41%) sepia(64%) saturate(531%) hue-rotate(182deg)
         brightness(84%) contrast(87%);
+}
+
+/* MEDIA SIZE CONTENT */
+
+@media only screen and (max-width: 1300px) {
+    .header,
+    .container {
+        max-width: 80rem;
+        padding: 4rem 5rem 12rem;
+    }
+
+    .willian-img {
+        width: 112px;
+    }
+
+    .willian article {
+        font-size: 2.6rem;
+    }
+
+    .vertical-line {
+        display: none;
+    }
+
+    .nav {
+        flex-direction: row;
+    }
+
+    .nav-items {
+        display: none;
+    }
 }

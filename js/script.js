@@ -6,6 +6,14 @@ const english = document.getElementById("en-us");
 const dialog = document.getElementById("lang");
 const home = document.getElementById("home");
 const info = document.getElementById("info");
+const homeEllipse = document.getElementById("home-ellipse");
+const infoEllipse = document.getElementById("info-ellipse");
+
+const openMenu = document.getElementById("open-btn-menu");
+const menu = document.getElementById("menu");
+
+var pageState = "port";
+var pageSection = "home";
 
 const ptbrContainer = `
     <article class="home-article">
@@ -53,7 +61,7 @@ const ptbrInfo = `
             </ul>
         </div>
         <hr>
-        <div class="resume">
+        <div class="college">
             <h1>Formação</h1>
             <p>Formado pela Instituição Federal do Paraná no curso ensino médio integrado de TI em 2023. Atualmente cursando Análise e Desenvolvimento de Sistemas pela Unipar.</p>
         </div>
@@ -76,8 +84,46 @@ const ptbrInfo = `
     </article>
 `;
 
+const engInfo = `
+    <article class="home-article">
+        <div class="info-job">
+            <h1>Professional experience</h1>
+            <ul>
+                <li>Front-end developer | internship</li>
+                <li>Image manipulation | freelancer</li>
+            </ul>
+        </div>
+        <hr>
+        <div class="college">
+            <h1>Academic | Educational</h1>
+            <p>I'm completed high school integrated IT course by Federal Institution of Paraná (IFPR) in 2023. Actually on a Technology degree by Unipar.</p>
+        </div>
+        <hr>
+        <div class="job-stuff">
+            <h1>Work tools</h1>
+            <section class="desing">
+                <img class="svg job-svg svg-adjust" src="./svg/Figma.svg" alt="figma">
+                <img class="svg job-svg svg-adjust" src="./svg/Photoshop.svg" alt="photoshop">
+                <img class="svg job-svg svg-adjust" src="./svg/Premiere Pro.svg" alt="Premiere">
+                <img class="svg job-svg svg-adjust" src="./svg/After Effects.svg" alt="after-effects">
+            </section>
+            <section class="code">
+                <img class="svg code-svg svg-adjust html" src="./svg/logo-html5.svg" alt="html">
+                <img class="svg code-svg svg-adjust css" src="./svg/logo-css3.svg" alt="css">
+                <img class="svg code-svg svg-adjust js" src="./svg/logo-javascript.svg" alt="js">
+                <img class="svg code-svg svg-adjust python" src="./svg/logo-python.svg" alt="python">
+            </section>
+        </div>
+    </article>
+`;
+
 document.addEventListener("DOMContentLoaded", () => {
     container.innerHTML = ptbrContainer;
+    homeEllipse.classList.add("light-ellipse");
+    infoEllipse.classList.add("dark-ellipse");
+
+    pageSection = "home";
+    pageState = "port";
 });
 
 openButton.addEventListener("click", () => {
@@ -85,22 +131,95 @@ openButton.addEventListener("click", () => {
     background.classList.add("blur");
 });
 
+openMenu.addEventListener("click", () => {
+    menu.showModal();
+    background.classList.add("blur");
+});
+
 portuguese.addEventListener("click", () => {
     dialog.close();
     background.classList.remove("blur");
-    container.innerHTML = ptbrContainer;
+
+    pageState = "port";
+
+    if (pageSection == "home") {
+        if (pageState == "port") {
+            container.innerHTML = ptbrContainer;
+        } else {
+            container.innerHTML = engContainer;
+        }
+    } else {
+        if (pageState == "port") {
+            container.innerHTML = ptbrInfo;
+        } else {
+            container.innerHTML = engInfo;
+        }
+    }
 });
 
 english.addEventListener("click", () => {
     dialog.close();
     background.classList.remove("blur");
-    container.innerHTML = engContainer;
+
+    pageState = "eng";
+
+    if (pageSection == "home") {
+        if (pageState == "port") {
+            container.innerHTML = ptbrContainer;
+        } else {
+            container.innerHTML = engContainer;
+        }
+    } else {
+        if (pageState == "port") {
+            container.innerHTML = ptbrInfo;
+        } else {
+            container.innerHTML = engInfo;
+        }
+    }
 });
 
 home.addEventListener("click", () => {
-    container.innerHTML = ptbrContainer;
+    pageSection = "home";
+
+    if (pageSection == "home") {
+        if (pageState == "port") {
+            container.innerHTML = ptbrContainer;
+        } else {
+            container.innerHTML = engContainer;
+        }
+    } else {
+        if (pageState == "port") {
+            container.innerHTML = ptbrInfo;
+        } else {
+            container.innerHTML = engInfo;
+        }
+    }
+
+    homeEllipse.classList.remove("dark-ellipse");
+    homeEllipse.classList.add("light-ellipse");
+    infoEllipse.classList.remove("light-ellipse");
+    infoEllipse.classList.add("dark-ellipse");
 });
 
 info.addEventListener("click", () => {
-    container.innerHTML = ptbrInfo;
+    pageSection = "info";
+
+    if (pageSection == "home") {
+        if (pageState == "port") {
+            container.innerHTML = ptbrContainer;
+        } else {
+            container.innerHTML = engContainer;
+        }
+    } else {
+        if (pageState == "port") {
+            container.innerHTML = ptbrInfo;
+        } else {
+            container.innerHTML = engInfo;
+        }
+    }
+
+    homeEllipse.classList.remove("light-ellipse");
+    homeEllipse.classList.add("dark-ellipse");
+    infoEllipse.classList.remove("dark-ellipse");
+    infoEllipse.classList.add("light-ellipse");
 });
