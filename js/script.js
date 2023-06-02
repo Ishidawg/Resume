@@ -64,7 +64,7 @@ const ptbrContainer = `
         <div class="functions">
             <h1>Áreas de atuação</h1>
             <ul>
-                <li>Desenvolvimento Web</li>
+                <li>Desenvolvedor Web</li>
                 <li>Designer Gráfico</li>
                 <li>Editor de Vídeo</li>
                 <li>Game Modder</li>
