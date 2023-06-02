@@ -11,12 +11,49 @@ const infoEllipse = document.getElementById("info-ellipse");
 
 const openMenu = document.getElementById("open-btn-menu");
 const menu = document.getElementById("menu");
+const mobileHome = document.getElementById("dialog-home");
+const mobileInfo = document.getElementById("dialog-info");
 
 const homeDialog = document.getElementById("dialog-home");
 const infoDialog = document.getElementById("dialog-info");
 
+const langTitle = document.getElementById("lang-title");
+const menuTitle = document.getElementById("menu-title");
+
 var pageState = "port";
 var pageSection = "home";
+
+const ptbrDialogMenu = `
+    <h1>Páginas</h1>
+`;
+
+const engDialogMenu = `
+    <h1>Pages</h1>
+`;
+
+const ptbrHomeButton = `
+    <span>Início</span>
+`;
+
+const engHomeButton = `
+    <span>Home</span>
+`;
+
+const ptbrInfoButton = `
+    <span>Sobre</span>
+`;
+
+const engInfoButton = `
+    <span>About</span>
+`;
+
+const ptbrLangDialog = `
+    <h1>Idioma</h1>
+`;
+
+const engLangDialog = `
+    <h1>Language</h1>
+`;
 
 const ptbrContainer = `
     <article class="home-article">
@@ -121,6 +158,11 @@ const engInfo = `
 `;
 
 document.addEventListener("DOMContentLoaded", () => {
+    menuTitle.innerHTML = ptbrDialogMenu;
+    homeDialog.innerHTML = ptbrHomeButton;
+    infoDialog.innerHTML = ptbrInfoButton;
+    langTitle.innerHTML = ptbrLangDialog;
+
     container.innerHTML = ptbrContainer;
     homeEllipse.classList.add("light-ellipse");
     infoEllipse.classList.add("dark-ellipse");
@@ -158,6 +200,11 @@ portuguese.addEventListener("click", () => {
             container.innerHTML = engInfo;
         }
     }
+
+    menuTitle.innerHTML = ptbrDialogMenu;
+    langTitle.innerHTML = ptbrLangDialog;
+    homeDialog.innerHTML = ptbrHomeButton;
+    infoDialog.innerHTML = ptbrInfoButton;
 });
 
 english.addEventListener("click", () => {
@@ -179,6 +226,11 @@ english.addEventListener("click", () => {
             container.innerHTML = engInfo;
         }
     }
+
+    menuTitle.innerHTML = engDialogMenu;
+    langTitle.innerHTML = engLangDialog;
+    homeDialog.innerHTML = engHomeButton;
+    infoDialog.innerHTML = engInfoButton;
 });
 
 home.addEventListener("click", () => {
@@ -225,4 +277,46 @@ info.addEventListener("click", () => {
     homeEllipse.classList.add("dark-ellipse");
     infoEllipse.classList.remove("dark-ellipse");
     infoEllipse.classList.add("light-ellipse");
+});
+
+mobileHome.addEventListener("click", () => {
+    menu.close();
+    background.classList.remove("blur");
+
+    pageSection = "home";
+
+    if (pageSection == "home") {
+        if (pageState == "port") {
+            container.innerHTML = ptbrContainer;
+        } else {
+            container.innerHTML = engContainer;
+        }
+    } else {
+        if (pageState == "port") {
+            container.innerHTML = ptbrInfo;
+        } else {
+            container.innerHTML = engInfo;
+        }
+    }
+});
+
+mobileInfo.addEventListener("click", () => {
+    menu.close();
+    background.classList.remove("blur");
+
+    pageSection = "info";
+
+    if (pageSection == "home") {
+        if (pageState == "port") {
+            container.innerHTML = ptbrContainer;
+        } else {
+            container.innerHTML = engContainer;
+        }
+    } else {
+        if (pageState == "port") {
+            container.innerHTML = ptbrInfo;
+        } else {
+            container.innerHTML = engInfo;
+        }
+    }
 });
