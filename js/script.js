@@ -59,7 +59,7 @@ const ptbrContainer = `
     <article class="home-article">
         <div class="resume">
             <h1>Sobre mim</h1>
-            <p>Muito prazer, me chamo Willian e tenho 19 anos, atualmente cursando Análise e Desenvolvimento de Sistemas pela Unipar. Sou apaixonado por tecnologia e design, devido a isso sempre estou estudando e fazendo projetos relacionados a qualquer assunto dentro dessas duas grandes áreas. Os projetos são bem variados, isso inclui: remake de interfaces gráficas, game HUD, landings pages, pequenas manipulações de imagem, game trainers, pequenos programas e afins.</p>
+            <p>Muito prazer, chamo-me Willian e tenho 19 anos. Atualmente cursando Análise e Desenvolvimento de Sistemas pela Unipar. Sou apaixonado por tecnologia e design, devido a isso sempre estou estudando e fazendo projetos relacionados a qualquer assunto dentro dessas grandes áreas. Os projetos são bem variados, isso inclui: remake de interfaces gráficas, game HUD, landings pages, pequenas manipulações de imagem, game trainers, pequenos programas e afins.</p>
         </div>
         <div class="functions">
             <h1>Áreas de atuação</h1>
