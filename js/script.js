@@ -59,7 +59,7 @@ const ptbrContainer = `
     <article class="home-article">
         <div class="resume">
             <h1>Sobre mim</h1>
-            <p>Muito prazer, me chamo Willian e tenho 19 anos, atualmente cursando Análise e Desenvolvimento de Sistemas pela Unipar. Sou apaixonado por tecnologia e design, devido a isso sempre estou estudando e fazendo projetos relacionados a qualquer assunto dentro dessas duas grandes áreas. Os projetos são bem variados, isso inclui: Remake de interfaces gráficas, game HUD, landings pages, pequenas manipulações de imagem, game trainers, pequenos programas e afins.</p>
+            <p>Muito prazer, me chamo Willian e tenho 19 anos, atualmente cursando Análise e Desenvolvimento de Sistemas pela Unipar. Sou apaixonado por tecnologia e design, devido a isso sempre estou estudando e fazendo projetos relacionados a qualquer assunto dentro dessas duas grandes áreas. Os projetos são bem variados, isso inclui: remake de interfaces gráficas, game HUD, landings pages, pequenas manipulações de imagem, game trainers, pequenos programas e afins.</p>
         </div>
         <div class="functions">
             <h1>Áreas de atuação</h1>
@@ -77,7 +77,7 @@ const engContainer = `
     <article class="home-article">
         <div class="resume">
             <h1>About me</h1>
-            <p>Hi! I’m Willian and I've fallen in love with tech and design for as long as I can remember. Actually on a Technology degree by Unipar. I work with graphic design, web development on front-end, video editing and game modding! Some of my projects include: Game UI and HUD remakes, landing pages, some image manipulation on photoshop, game trainers and desktop softwares at all.</p>
+            <p>Hi! I’m Willian and I've fallen in love with tech and design for as long as I can remember. Actually on a Technology degree by Unipar. I work with graphic design, web development on front-end, video editing and game modding! Some of my projects include: game UI and HUD remakes, landing pages, some image manipulation on photoshop, game trainers and desktop softwares at all.</p>
         </div>
         <div class="functions">
             <h1>Work as</h1>
